@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Getting Started: Handling Form Submission</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- Bootstrap -->
+<link href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet" media="screen">
+</link>
+
+</head>
+<body>
+	<div th:replace="fragments/header :: header"></div>
+	<h1>Result</h1>
+	<p th:text="'id: ' + ${paciente.id}" />
+	<p th:text="'nombre: ' + ${paciente.nombre}" />
+	<p th:text="'edad: ' + ${paciente.edad}" />
+	<a type="button" class="btn btn-success" href="/paciente/add">
+		<span class="glyphicon glyphicon-plus"></span> Añadir un nuevo
+		paciente
+	</a>
+
+	<div th:replace="fragments/footer :: footer"></div>
+
+</body>
+</html>

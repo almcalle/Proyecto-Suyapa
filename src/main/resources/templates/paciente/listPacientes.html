@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Proyecto Suyapa: Lista de Pacientes</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- Bootstrap -->
+<link href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet" media="screen">
+</link>
+</head>
+<body>
+	<div th:replace="fragments/header :: header"></div>
+	<h1>Pacientes</h1>
+
+	<a type="button" class="btn btn-success" href="/paciente/add">
+		<span class="glyphicon glyphicon-plus"></span> Añadir un nuevo
+		paciente
+	</a>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>#ID</th>
+				<th>Nombre</th>
+				<th>Edad</th>
+				<th>Acciones</th>
+			</tr>
+		</thead>
+		<div th:each="paciente : ${pacientes}">
+			<tr>
+				<td th:text="${paciente.id}"></td>
+				<td th:text="${paciente.nombre}"></td>
+				<td th:text="${paciente.edad}"></td>
+				<td>
+					<button class="btn btn-info" onclick="location.href=/paciente/id">Ver
+						Informes</button>
+					<button class="btn btn-primary" onclick="location.href=/update/id">Actualizar</button>
+					<button class="btn btn-danger" onclick="location.href=/delete/id">Eliminar</button>
+				</td>
+			</tr>
+
+		</div>
+
+		<div th:replace="fragments/footer :: footer"></div>
+</body>
+</html>
