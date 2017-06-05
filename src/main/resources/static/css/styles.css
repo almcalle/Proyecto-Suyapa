@@ -29,7 +29,9 @@ td {
 
 .main{
     margin-left: 280px;
-    padding: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
     transition: margin-left .5s;
     }
 
