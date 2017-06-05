@@ -1,15 +1,15 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-<title>Proyecto Suyapa: Lista de Pacientes</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<!-- Bootstrap -->
-<link href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css"
-	rel="stylesheet" media="screen">
-</link>
-</head>
+<head th:replace="fragments/head :: head">
+    <title>Proyecto Suyapa</title>    
+  </head>
+
 <body>
-	<div th:replace="fragments/header :: header"></div>
+<div th:replace="fragments/menu :: menu">
+</div>
+
+	<div id="main">
+	
 	<h1>Pacientes</h1>
 
 	<a type="button" class="btn btn-success" href="/paciente/add">
@@ -39,7 +39,14 @@
 			</tr>
 
 		</div>
+		</table>
 
 		<div th:replace="fragments/footer :: footer"></div>
+		</div>
 </body>
+
+<script>
+// Da la clase active a el boton del menú
+$("#lista").addClass("active");
+</script>
 </html>

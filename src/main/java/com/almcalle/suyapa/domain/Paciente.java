@@ -11,6 +11,7 @@ public class Paciente {
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
 	Long id;
+	
 	String nombre;
 	Integer edad;
 	
