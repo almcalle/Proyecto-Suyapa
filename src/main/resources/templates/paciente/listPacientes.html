@@ -31,10 +31,15 @@
 				<td th:text="${paciente.nombre}"></td>
 				<td th:text="${paciente.edad}"></td>
 				<td>
-					<button class="btn btn-info" onclick="location.href=/paciente/id">Ver
-						Informes</button>
-					<button class="btn btn-primary" onclick="location.href=/update/id">Actualizar</button>
-					<button class="btn btn-danger" onclick="location.href=/delete/id">Eliminar</button>
+					<a type="button" class="btn btn-info" 
+					th:href="@{'/paciente/' + ${paciente.id}}">
+<!-- 					onclick="location.href=/paciente/id" -->
+					Ver
+						Datos del paciente</button>
+						<a type="button" class="btn btn-info" onclick="location.href=/paciente/id/vacunas">Ver
+						Vacunas</button>
+					<a type="button" class="btn btn-primary" onclick="location.href=/update/id">Actualizar</button>
+					<a type="button" class="btn btn-danger" onclick="location.href=/delete/id">Eliminar</button>
 				</td>
 			</tr>
 

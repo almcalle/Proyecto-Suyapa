@@ -6,16 +6,23 @@
 <body>
 <body>
 <div th:replace="fragments/menu :: menu">
+</div>
+<div class="main">
 	<h1>Result</h1>
-	<p th:text="'id: ' + ${paciente.id}" />
-	<p th:text="'nombre: ' + ${paciente.nombre}" />
-	<p th:text="'edad: ' + ${paciente.edad}" />
+<!-- 	<p th:text="'id: ' + ${paciente.id}" /> -->
+	<p th:text="'Nombre: ' + ${paciente.nombre}" />
+	<p th:text="'Edad: ' + ${paciente.edad}" />
+	<a type="button" class="btn btn-info" href="/pacientes">
+		 Ver lista de pacientes
+	</a>
 	<a type="button" class="btn btn-success" href="/paciente/add">
 		<span class="glyphicon glyphicon-plus"></span> Añadir un nuevo
 		paciente
 	</a>
+	
 
 	<div th:replace="fragments/footer :: footer"></div>
+</div>
 
 </body>
 </html>
