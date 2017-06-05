@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Proyecto Suyapa</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> </meta>
-    <!-- Bootstrap -->
-    <link href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="screen"> </link>
-    <link href="css/styles.css" rel="stylesheet"/> 
 
-</head>
 
 <head th:replace="fragments/head :: head">
     <title>Proyecto Suyapa</title>    
@@ -19,17 +12,23 @@
 <div th:replace="fragments/menu :: menu">
 </div>
 
-<div id="main">
-	<div class="container">
-		<div class="btn-group">
-			<button type="button" class="btn btn-success">This is a
-				success button</button>
-			<button type="button" class="btn btn-warning">This is a
-				warning button</button>
-			<button type="button" class="btn btn-danger">This is a
-				danger button</button>
-		</div>
-	</div>
+<div class="main">
+		
+<h1>Proyecto Suyapa</h1>
+
+<p>Esta es la página pricipal del proyecto Suyapa</p>
+
+
+<!-- 	<div class="container"> -->
+<!-- 		<div class="btn-group"> -->
+<!-- 			<button type="button" class="btn btn-success">This is a -->
+<!-- 				success button</button> -->
+<!-- 			<button type="button" class="btn btn-warning">This is a -->
+<!-- 				warning button</button> -->
+<!-- 			<button type="button" class="btn btn-danger">This is a -->
+<!-- 				danger button</button> -->
+<!-- 		</div> -->
+<!-- 	</div> -->
 	</div>
 	<div th:replace="fragments/footer :: footer"/>  
 

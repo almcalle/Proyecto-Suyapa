@@ -48,7 +48,7 @@ public class PacienteController {
     }
 
     @PostMapping("/paciente")
-    public String greetingSubmit(@ModelAttribute Paciente paciente) {
+    public String guardarPaciente(@ModelAttribute Paciente paciente) {
     	
     	
     	pacienteRepository.save(paciente);
