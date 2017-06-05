@@ -10,11 +10,11 @@
 
 <div class="main">
 	
-	<h1>Pacientes</h1>
+	<h1>Alumnos</h1>
 
-	<a type="button" class="btn btn-success" href="/paciente/add">
+	<a type="button" class="btn btn-success" href="/alumno/add">
 		<span class="glyphicon glyphicon-plus"></span> Añadir un nuevo
-		paciente
+		alumno
 	</a>
 	<table class="table table-striped">
 		<thead>
@@ -25,18 +25,18 @@
 				<th>Acciones</th>
 			</tr>
 		</thead>
-		<div th:each="paciente : ${pacientes}">
+		<div th:each="alumno : ${alumnos}">
 			<tr>
-				<td th:text="${paciente.id}"></td>
-				<td th:text="${paciente.nombre}"></td>
-				<td th:text="${paciente.edad}"></td>
+				<td th:text="${alumno.id}"></td>
+				<td th:text="${alumno.nombre}"></td>
+				<td th:text="${alumno.edad}"></td>
 				<td>
 					<a type="button" class="btn btn-info" 
-					th:href="@{'/paciente/' + ${paciente.id}}">
-<!-- 					onclick="location.href=/paciente/id" -->
+					th:href="@{'/alumno/' + ${alumno.id}}">
+<!-- 					onclick="location.href=/alumno/id" -->
 					Ver
-						Datos del paciente</button>
-						<a type="button" class="btn btn-info" onclick="location.href=/paciente/id/vacunas">Ver
+						Datos del alumno</button>
+						<a type="button" class="btn btn-info" onclick="location.href=/alumno/id/vacunas">Ver
 						Vacunas</button>
 					<a type="button" class="btn btn-primary" onclick="location.href=/update/id">Actualizar</button>
 					<a type="button" class="btn btn-danger" onclick="location.href=/delete/id">Eliminar</button>
