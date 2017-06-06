@@ -19,27 +19,27 @@
 	<table class="table table-striped">
 		<thead>
 			<tr>
-				<th>#ID</th>
+<!-- 				<th>#ID</th> -->
 				<th>Nombre</th>
 				<th>Edad</th>
 				<th>Acciones</th>
 			</tr>
 		</thead>
 		<div th:each="alumno : ${alumnos}">
+		
 			<tr>
-				<td th:text="${alumno.id}"></td>
+<!-- 				<td th:text="${alumno.id}"></td> -->
 				<td th:text="${alumno.nombre}"></td>
 				<td th:text="${alumno.edad}"></td>
 				<td>
 					<a type="button" class="btn btn-info" 
 					th:href="@{'/alumno/' + ${alumno.id}}">
-<!-- 					onclick="location.href=/alumno/id" -->
 					Ver
-						Datos del alumno</button>
-						<a type="button" class="btn btn-info" onclick="location.href=/alumno/id/vacunas">Ver
-						Vacunas</button>
-					<a type="button" class="btn btn-primary" onclick="location.href=/update/id">Actualizar</button>
-					<a type="button" class="btn btn-danger" onclick="location.href=/delete/id">Eliminar</button>
+						Datos del alumno</a>
+						<a type="button" class="btn btn-info" th:href="@{'/alumno/' + ${alumno.id} +'/vacunas'}">Ver
+						Vacunas</a>
+					<a type="button" class="btn btn-primary" onclick="location.href=/update/id">Actualizar</a>
+					<a type="button" class="btn btn-danger" onclick="location.href=/delete/id">Eliminar</a>
 				</td>
 			</tr>
 

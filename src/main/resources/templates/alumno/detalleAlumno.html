@@ -15,6 +15,10 @@
 	<a type="button" class="btn btn-info" href="/alumnos">
 		 Ver lista de alumnos
 	</a>
+	
+	<a type="button" class="btn btn-info" th:href="@{'/alumno/' + ${alumno.id} +'/vacunas'}">Ver
+						Vacunas</a>
+						
 	<a type="button" class="btn btn-success" href="/alumno/add">
 		<span class="glyphicon glyphicon-plus"></span> Añadir un nuevo
 		alumno

@@ -8,6 +8,7 @@ a.btn {
 
 td {
     padding: 20px !important;
+    vertical-align: middle !important;
 }
 
 .active{
@@ -61,3 +62,6 @@ td {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
+
+
